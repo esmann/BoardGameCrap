@@ -16,7 +16,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="@string/countdown_timer"
-                android:id="@+id/countdown" android:autoText="false"
+                android:id="@+id/countdown"
                 android:textSize="60dp" android:textIsSelectable="false"/>
         <TextView
                 android:layout_width="fill_parent"
@@ -32,7 +32,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
                     android:text="@string/start"
-                    android:id="@+id/buttonStop" android:layout_weight="1" android:onClick="onStart"/>
+                    android:id="@+id/buttonStart" android:layout_weight="1" android:onClick="onStart"/>
             <Button
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"

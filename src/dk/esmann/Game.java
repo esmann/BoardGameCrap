@@ -1,8 +1,8 @@
 package dk.esmann;
 
-public class Game {
-    int id, numberOfRounds, hours, minutes;
-    String name;
+class Game {
+    private int id, numberOfRounds, hours, minutes;
+    private String name;
 
     public Game() {
     }

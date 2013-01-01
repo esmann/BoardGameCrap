@@ -6,7 +6,7 @@
     <string name="numberOfRounds">Number of rounds:</string>
     <string name="playTime">Play time</string>
     <string name="add">Add</string>
-    <string name="countdown_timer">%1$d:%2$d:%3$d</string>
+    <string name="countdown_timer">%1$d:%2$02d:%3$02d</string>
     <string name="round_x_of_z">Round %1$d of %2$d</string>
     <string name="start">Start</string>
     <string name="stop">Stop</string>

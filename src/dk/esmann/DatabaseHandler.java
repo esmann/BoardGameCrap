@@ -27,7 +27,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     private static final String KEY_ROUNDS = "numberOfRounds";
     private static final String KEY_HOURS = "hours";
     private static final String KEY_MIN = "minutes";
-    private static DatabaseHandler instance = null;
+    private static final DatabaseHandler instance = null;
 
     public static DatabaseHandler getInstance(Context context) {
         if(instance == null) {
@@ -84,11 +84,11 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         Cursor cursor = db.query(TABLE_GAMES, new String[] { KEY_ID,
                 KEY_NAME, KEY_ROUNDS, KEY_HOURS, KEY_MIN }, KEY_ID + "=?",
                 new String[] { String.valueOf(id) }, null, null, null, null);
-        if (cursor != null)
+        Game game = new Game();
+        if (cursor != null) {
             cursor.moveToFirst();
-
-        Game game = new Game(Integer.parseInt(cursor.getString(0)),
-                cursor.getString(1), cursor.getInt(2), cursor.getInt(3), cursor.getInt(4));
+            game = new Game(Integer.parseInt(cursor.getString(0)), cursor.getString(1), cursor.getInt(2), cursor.getInt(3), cursor.getInt(4));
+        }
         db.close();
         return game;
     }

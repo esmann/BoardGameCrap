@@ -14,8 +14,8 @@ import android.widget.ListView;
 import java.util.List;
 
 public class GamesView extends Activity {
-    static final int ADD_GAME_REQUEST = 1;
-    static final String TAG = "BOARDGAMECRAP";
+    private static final int ADD_GAME_REQUEST = 1;
+    private static final String TAG = "BOARDGAMECRAP";
     private List<Game> games;
     /**
      * Called when the activity is first created.
@@ -25,10 +25,6 @@ public class GamesView extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         updateListView();
-        KeyguardManager keyguardManager = (KeyguardManager)getSystemService(Activity.KEYGUARD_SERVICE);
-        KeyguardManager.KeyguardLock lock = keyguardManager.newKeyguardLock(KEYGUARD_SERVICE);
-        lock.disableKeyguard();
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
     }
 
     @SuppressWarnings("UnusedDeclaration")
