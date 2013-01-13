@@ -45,19 +45,15 @@
     </option>
   </component>
   <component name="ChangeListManager">
-    <list id="d7dcc174-8163-4a40-a1cd-328a538d4d8d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/Alex.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+    <list default="true" id="c763ff51-2335-4492-90e5-43ff3410ef06" name="workspace" comment="fixed various bugs">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
-    <list default="true" id="c763ff51-2335-4492-90e5-43ff3410ef06" name="workspace" comment="fixed various bugs" />
     <ignored path="BoardGameCrap.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/main.xml" changelist="d7dcc174-8163-4a40-a1cd-328a538d4d8d" time="1356899443994" ignored="false" />
     <file path="/strings.xml" changelist="d7dcc174-8163-4a40-a1cd-328a538d4d8d" time="1356914244529" ignored="false" />
     <file path="/GamesView.java" changelist="d7dcc174-8163-4a40-a1cd-328a538d4d8d" time="1357050493189" ignored="false" />
-    <file path="/Dummy.txt" changelist="c763ff51-2335-4492-90e5-43ff3410ef06" time="1358090750918" ignored="false" />
+    <file path="/Dummy.txt" changelist="c763ff51-2335-4492-90e5-43ff3410ef06" time="1358090778071" ignored="false" />
     <file path="/AndroidManifest.xml" changelist="d7dcc174-8163-4a40-a1cd-328a538d4d8d" time="1357049329961" ignored="false" />
     <file path="/fragment.java" changelist="d7dcc174-8163-4a40-a1cd-328a538d4d8d" time="1356902069718" ignored="false" />
     <file path="/AddGame.java" changelist="d7dcc174-8163-4a40-a1cd-328a538d4d8d" time="1356914856807" ignored="false" />
@@ -70,7 +66,6 @@
     <file path="/addgame.xml" changelist="d7dcc174-8163-4a40-a1cd-328a538d4d8d" time="1357049380402" ignored="false" />
     <file path="/README" changelist="d7dcc174-8163-4a40-a1cd-328a538d4d8d" time="1356948731533" ignored="false" />
     <file path="/a.xml" changelist="d7dcc174-8163-4a40-a1cd-328a538d4d8d" time="1357050127859" ignored="false" />
-    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="c763ff51-2335-4492-90e5-43ff3410ef06" time="1358090757775" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -441,7 +436,6 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d7dcc174-8163-4a40-a1cd-328a538d4d8d" name="Default" comment="" />
       <changelist id="c763ff51-2335-4492-90e5-43ff3410ef06" name="workspace" comment="" />
       <created>1356897952720</created>
       <updated>1356897952720</updated>
@@ -462,7 +456,11 @@
       <created>1358090730694</created>
       <updated>1358090730694</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="workspace files">
+      <created>1358090783484</created>
+      <updated>1358090783484</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -540,7 +538,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed various bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="workspace files" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -557,6 +555,7 @@
     <MESSAGE value="added todo" />
     <MESSAGE value="code cleanup&#10;fixed keyguard disabling&#10;fixed loss of state on rotation" />
     <MESSAGE value="fixed various bugs" />
+    <MESSAGE value="workspace files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
