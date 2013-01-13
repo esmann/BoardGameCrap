@@ -1,7 +1,6 @@
 package dk.esmann;
 
 import android.app.Activity;
-import android.app.KeyguardManager;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
@@ -19,6 +18,7 @@ public class Timer extends Activity {
     private TextView roundTextView, countdownTextView, avgTime;
     private Resources res;
     private CountDownTimer countDownTimer;
+    private Boolean timerIsRunning = false;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,6 +50,10 @@ public class Timer extends Activity {
                 public void onTick(long millis) {
                     remainingMillis = millis;
                     int remainingRounds = (rounds-completedRounds);
+                    if (remainingRounds == 0) {
+                        onFinish();
+                        return;
+                    }
                     long avgMillis = remainingMillis/remainingRounds;
                     roundTextView.setText(String.format(res.getString(R.string.round_x_of_z), completedRounds+1, rounds));
                     countdownTextView.setText(String.format(res.getString(R.string.countdown_timer), getHoursFromMillis(millis), getMinutesFromMillis(millis), getSecondsFromMillis(millis)));
@@ -61,6 +65,7 @@ public class Timer extends Activity {
                 }
             };
         countDownTimer.start();
+        timerIsRunning = true;
     }
 
     public void onResume() {
@@ -74,8 +79,17 @@ public class Timer extends Activity {
     }
     @SuppressWarnings("UnusedDeclaration")
     public void onStop(View view) {
-        countDownTimer.cancel();
-        completedRounds++;
+        if (timerIsRunning) {
+            if (completedRounds < rounds) {
+                completedRounds++;
+                Log.d(TAG, "completed rounds: " + completedRounds);
+            }
+        }
+
+        if (countDownTimer != null) {
+            countDownTimer.cancel();
+            timerIsRunning = false;
+        }
     }
 
     private long getHoursFromMillis(long millis) {
