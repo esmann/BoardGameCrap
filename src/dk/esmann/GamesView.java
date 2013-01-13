@@ -1,12 +1,10 @@
 package dk.esmann;
 
 import android.app.Activity;
-import android.app.KeyguardManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -49,6 +47,17 @@ public class GamesView extends Activity {
                       onGameClick(position);
                   }
                 });
+
+        listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int position, long id) {
+                Log.d(TAG, "longpress detected");
+                Game game = games.get(position);
+                Intent intent = new Intent(getBaseContext(), EditDeleteDialog.class);
+                intent.putExtra("game", game);
+                startActivityForResult(intent, 0);
+                return true;
+            }
+        });
 
         ArrayAdapter<Game> adapter = new ArrayAdapter<Game>(this, android.R.layout.simple_list_item_1, android.R.id.text1, games);
         listView.setAdapter(adapter);

@@ -11,4 +11,7 @@
     <string name="start">Start</string>
     <string name="stop">Stop</string>
     <string name="avg_round_time">Avg. time for remaining %1$d rounds: %2$d:%3$d:%4$d</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="edit_delete_title">Edit/Delete</string>
 </resources>
