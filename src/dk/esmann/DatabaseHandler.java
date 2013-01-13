@@ -116,7 +116,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         return gameList;
     }
 
-    public int updateGame(Game game) {
+    public Boolean updateGame(Game game) {
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
@@ -129,7 +129,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         int result = db.update(TABLE_GAMES, values, KEY_ID + " = ?",
                 new String[] { String.valueOf(game.getId()) });
         db.close();
-        return result;
+        return (result == 1);
     }
 
     public void deleteGame(Game game) {

@@ -27,10 +27,11 @@ public class Timer extends Activity {
         //getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         Intent intent = getIntent();
-        rounds = intent.getIntExtra("rounds", 1);
+        Game game = intent.getParcelableExtra("game");
+        rounds = game.getNumberOfRounds();
+        int hours = game.getHours();
+        int minutes = game.getMinutes();
         completedRounds = 0;
-        int hours = intent.getIntExtra("hours", 0);
-        int minutes = intent.getIntExtra("minutes", 0);
         roundTextView = (TextView) findViewById(R.id.timerRound);
         countdownTextView = (TextView) findViewById(R.id.countdown);
         avgTime = (TextView)findViewById(R.id.avg_round_time);

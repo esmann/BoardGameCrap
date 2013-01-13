@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
 public class EditDeleteDialog extends Activity {
@@ -15,9 +14,6 @@ public class EditDeleteDialog extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dialog_edit_delete);
         Intent intent = getIntent();
-
-        Button button = (Button) findViewById(R.id.editButton);
-        button.setEnabled(false);
 
         this.setTitle(R.string.edit_delete_title);
         TextView text = (TextView) findViewById(R.id.game_title);
@@ -30,6 +26,9 @@ public class EditDeleteDialog extends Activity {
         Intent intent = getIntent();
         Game game = intent.getParcelableExtra("game");
         Log.d(TAG, "edit game: " + game.getId());
+        Intent editIntent = new Intent(getBaseContext(), AddGame.class);
+        editIntent.putExtra("game", game);
+        startActivityForResult(editIntent, 0);
         finish();
     }
 

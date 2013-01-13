@@ -66,9 +66,7 @@ public class GamesView extends Activity {
     private void onGameClick(int position) {
         Game game = games.get(position);
         Intent intent = new Intent(this, Timer.class);
-        intent.putExtra("rounds", game.getNumberOfRounds());
-        intent.putExtra("hours", game.getHours());
-        intent.putExtra("minutes", game.getMinutes());
+        intent.putExtra("game", game);
         startActivity(intent);
     }
 
