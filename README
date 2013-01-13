@@ -1,6 +1,1 @@
 Prototype for board game timer
-
-TODO:
-  * Delete games
-  * Edit games
-  * Save/Load state so the countdown doesn't reset on rotation etc.
