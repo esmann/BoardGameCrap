@@ -1,12 +1,16 @@
 package dk.esmann;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.provider.CalendarContract;
 import android.util.Log;
 import android.view.View;
-import android.widget.*;
+import android.widget.AdapterView;
+import android.widget.CursorAdapter;
+import android.widget.ListView;
+import android.widget.SimpleCursorAdapter;
 
 /**
  * Created with IntelliJ IDEA.
@@ -16,6 +20,7 @@ import android.widget.*;
  * To change this template use File | Settings | File Templates.
  */
 public class chooseCalendar extends Activity {
+
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.choosecalendar);
@@ -32,7 +37,10 @@ public class chooseCalendar extends Activity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Cursor item = (Cursor)listView.getItemAtPosition(position);
-                Toast.makeText(getApplicationContext(), String.format("Clicked %s at position %d with id %d", item.getString(1), position, id), Toast.LENGTH_LONG).show();
+                Intent intent = new Intent();
+                intent.putExtra("calendarId", id);
+                setResult(RESULT_OK, intent);
+                finish();
             }
         });
     }

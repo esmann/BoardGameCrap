@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 /**
  * Created with IntelliJ IDEA.
@@ -43,8 +42,6 @@ public class MainActivity extends Activity {
                 if (intent != null) {
                     startActivity(intent);
                 }
-
-                Toast.makeText(getApplicationContext(), String.format("Clicked %s at position %d with id %d", item, position, id), Toast.LENGTH_LONG).show();
             }
         });
     }
