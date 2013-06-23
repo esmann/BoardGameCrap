@@ -10,7 +10,7 @@ import android.widget.TimePicker;
 
 public class AddGame extends Activity {
     private static final String TAG = "ADDGAME";
-    private Integer gameId;
+    private Integer gameId = -1;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

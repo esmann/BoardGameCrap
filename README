@@ -1,6 +1,21 @@
-Prototype for board game timer
+Prototype for board game app
+
+Planned features
+  * Events
+  * Game Timers
+  * Plays (List of plays from BGG)
+  * Settings
 
 TODO:
-  * Delete games
-  * Edit games
-  * Save/Load state so the countdown doesn't reset on rotation etc.
+  * Events
+    * Everything
+  * Game Timers
+    * Delete games
+    * Edit games
+    * Save/Load state so the countdown doesn't reset on rotation etc.
+  * Plays
+    * Everything
+  * Settings
+    * Save chosen calendar
+    * Get and save BGG username
+

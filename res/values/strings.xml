@@ -14,4 +14,13 @@
     <string name="edit">Edit</string>
     <string name="delete">Delete</string>
     <string name="edit_delete_title">Edit/Delete</string>
+    <string name="addEventText">Add Event</string>
+    <!-- strings for main view -->
+    <string name="mainEvents">Events</string>
+    <string name="mainGameTimers">Game Timers</string>
+    <string name="mainPlays">Plays</string>
+    <string name="mainSettings">Settings</string>
+    <!-- strings for settings view -->
+    <string name="settingsCalendar">Calendar</string>
+    <string name="BGGUsername">BGG Username</string>
 </resources>

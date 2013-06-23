@@ -11,7 +11,7 @@ import android.widget.ListView;
 
 import java.util.List;
 
-public class GamesView extends Activity {
+public class GameTimers extends Activity {
     private static final int ADD_GAME_REQUEST = 1;
     private static final String TAG = "BOARDGAMECRAP";
     private List<Game> games;
@@ -21,7 +21,7 @@ public class GamesView extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        setContentView(R.layout.gametimers);
         updateListView();
     }
 

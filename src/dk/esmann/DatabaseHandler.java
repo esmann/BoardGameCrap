@@ -117,19 +117,23 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     }
 
     public Boolean updateGame(Game game) {
-        SQLiteDatabase db = this.getWritableDatabase();
+        if (game.getId() == -1) {
+            throw new IllegalArgumentException("Cannot update game with invalid id");
+        } else {
+            SQLiteDatabase db = this.getWritableDatabase();
 
-        ContentValues values = new ContentValues();
-        values.put(KEY_NAME, game.getName());
-        values.put(KEY_ROUNDS, game.getNumberOfRounds());
-        values.put(KEY_HOURS, game.getHours());
-        values.put(KEY_MIN, game.getMinutes());
+            ContentValues values = new ContentValues();
+            values.put(KEY_NAME, game.getName());
+            values.put(KEY_ROUNDS, game.getNumberOfRounds());
+            values.put(KEY_HOURS, game.getHours());
+            values.put(KEY_MIN, game.getMinutes());
 
 
-        int result = db.update(TABLE_GAMES, values, KEY_ID + " = ?",
-                new String[] { String.valueOf(game.getId()) });
-        db.close();
-        return (result == 1);
+            int result = db.update(TABLE_GAMES, values, KEY_ID + " = ?",
+                    new String[] { String.valueOf(game.getId()) });
+            db.close();
+            return (result == 1);
+        }
     }
 
     public void deleteGame(Game game) {
