@@ -30,11 +30,11 @@ public class Settings extends Activity {
         listView.setClickable(true);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Object item = listView.getItemAtPosition(position);
+                //Object item = listView.getItemAtPosition(position);
                 Intent intent = null;
                 switch(position) {
                     case 0: // Calendar
-                        intent = new Intent(getBaseContext(), chooseCalendar.class);
+                        intent = new Intent(getBaseContext(), ChooseCalendar.class);
                         break;
                     case 1: // BGG username
                         break;

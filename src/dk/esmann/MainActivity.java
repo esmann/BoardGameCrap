@@ -23,7 +23,7 @@ public class MainActivity extends Activity {
         listView.setClickable(true);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Object item = listView.getItemAtPosition(position);
+                //Object item = listView.getItemAtPosition(position);
                 Intent intent = null;
                 switch(position) {
                     case 0: // Events
@@ -36,6 +36,8 @@ public class MainActivity extends Activity {
                         break;
                     case 3: // Settings
                         intent = new Intent(getBaseContext(), Settings.class);
+                        break;
+                    default:
                         break;
 
                 }

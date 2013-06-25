@@ -19,7 +19,7 @@ import android.widget.SimpleCursorAdapter;
  * Time: 11:35 PM
  * To change this template use File | Settings | File Templates.
  */
-public class chooseCalendar extends Activity {
+public class ChooseCalendar extends Activity {
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,7 +36,7 @@ public class chooseCalendar extends Activity {
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Cursor item = (Cursor)listView.getItemAtPosition(position);
+                //Cursor item = (Cursor)listView.getItemAtPosition(position);
                 Intent intent = new Intent();
                 intent.putExtra("calendarId", id);
                 setResult(RESULT_OK, intent);

@@ -27,7 +27,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     private static final String KEY_ROUNDS = "numberOfRounds";
     private static final String KEY_HOURS = "hours";
     private static final String KEY_MIN = "minutes";
-    private static final DatabaseHandler instance = null;
+    private static DatabaseHandler instance = null;
 
     public static DatabaseHandler getInstance(Context context) {
         if(instance == null) {
